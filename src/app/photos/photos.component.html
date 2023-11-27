@@ -1,0 +1,18 @@
+<div *ngIf="albums.length > 0" class="content">
+    <div class="album-card" *ngFor="let album of albums">
+      <mat-card style="margin: 10px; width: 400px;">
+        <mat-card-header style="height: 150px;">
+          <mat-card-title style="color: white; text-align: center; height: 90px;">{{ album.title }}</mat-card-title>
+          <mat-card-subtitle style="text-align: center;">Album ID - Foto ID: {{album.albumId}}-{{ album.id }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]=album.url alt="Album Cover">
+        <mat-card-content>
+        </mat-card-content>
+        <mat-card-actions>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  <div *ngIf="albums.length === 0">
+    <p>Loading photos...</p>
+  </div>

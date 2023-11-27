@@ -1,0 +1,13 @@
+<div  *ngFor="let photos of data.list" class="content">
+    <mat-card style="margin: 10px; width: 400px;">
+        <mat-card-header style="height: 150px;">
+          <mat-card-title style="color: white; text-align: center; height: 90px;">{{ photos.title }}</mat-card-title>
+          <mat-card-subtitle style="text-align: center;">Album ID - Foto ID: {{photos.albumId}}-{{ photos.id }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]=photos.url alt="Album Cover">
+        <mat-card-content>
+        </mat-card-content>
+        <mat-card-actions>
+        </mat-card-actions>
+      </mat-card>
+</div>

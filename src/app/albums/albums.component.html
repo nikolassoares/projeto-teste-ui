@@ -1,0 +1,21 @@
+<div *ngIf="albums.length > 0" class="content">
+    <div class="album-card" *ngFor="let album of albums">
+      <mat-card style="margin: 10px; width: 300px;">
+        <mat-card-header style="height: 100px;">
+          <!-- <div mat-card-avatar class="example-header-image"></div> -->
+          <mat-card-title style="color: white; text-align: center; height: 70px;">{{ album.title }}</mat-card-title>
+          <mat-card-subtitle style="text-align: center;">Album ID: {{ album.id }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src={{showPhotos(album.id)}} alt="Album Cover">
+        <mat-card-content>
+          <p>{{ album.body }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="goToPhotos(album.id)">Ver Detalhes</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  <div *ngIf="albums.length === 0">
+    <p>Loading albums...</p>
+  </div>

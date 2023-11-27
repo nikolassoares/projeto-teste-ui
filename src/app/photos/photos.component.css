@@ -1,0 +1,16 @@
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    justify-content: center;
+}
+.album-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .example-header-image {
+    background-image: url('https://via.placeholder.com/40');
+    background-size: cover;
+  }
